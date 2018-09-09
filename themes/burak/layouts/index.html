@@ -1,0 +1,67 @@
+{{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <nav class="level">
+                <p class="level-left has-text-centered">
+                    <img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;">
+                </p>
+                <p class="level-right has-text-centered is-italic has-text-success">
+                    The world through the lenses.
+                </p>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tile is-ancestor has-text-justified">
+                <div class="tile is-parent">
+                    {{ range first 1 .Pages.ByPublishDate.Reverse }}
+                    <div class="tile is-child box">
+                        <p class="title"> 
+                            <a class="link is-info">{{ .Title }}</a>
+                        </p>
+                        <p class="subtitle is-6 is-italic">written by {{ .Params.Author }} on {{ .PublishDate.Format "January 2, 2006" }}.</p>
+                        {{ .Content | safeHTML | truncate 1000 }} <a href="{{ .Permalink }}"> read more.</a>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="tile is-4 is-vertical is-parent">
+                    {{ range first 3 (after 1 .Pages.ByPublishDate.Reverse) }}
+                        <div class="tile is-child box">
+                            <p class="title is-5"> 
+                                <a class="link is-info">{{ .Title }}</a>
+                            </p>
+                            <p class="subtitle is-6 is-italic">written by {{ .Params.Author }} on {{ .PublishDate.Format "January 2, 2006" }}.</p>
+                            <p>{{  .Content | safeHTML | truncate 100 }} <a href="{{ .Permalink }}"> read more.</a></p>
+                        </div>
+                    {{ end }}
+                </div>
+
+            </div>
+        </div>
+    </section>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Bulma</strong> by
+            <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+    </div>
+</footer>
+</body>
