@@ -1,48 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
 
-$white: #fff;
-$beet: #49002c;
-$beet-darker: #200b1f;
-$regal-red: #540032;
-$regal-red-lighter: #66003d;
-$fire: #C9283E;
-$violet: #965677;
-$violet-lighter: #AB6288;
-$violet-darker: #78455F;
-$red-wine: #69013f;
-$red-wine-darker: #540032;
-$scarlet-pink: #e7b7bb;
+$tangerine: #ff4e00;
+$tangerine-lighter: #ff834d;
+$tangerine-darker: #cc3e00;
 
-$poison: #8ed480;
-$poison-lighter: #afdda5;
-$poison-darker: #539e44;
+$metal: #f6f6f6;
+$metal-lighter: #fbfbfb;
+$metal-darker: #eee;
 
 $family-playfair: "Playfair Display", serif;
 $family-opensans: "Open Sans", sans-serif;
 $family-primary: $family-opensans;
 
-$primary: $regal-red;
-$success: $poison;
-$info: $scarlet-pink;
+$primary: $tangerine;
+$success: black;
+$info: black;
 
-$navbar-item-hover-background-color: $regal-red-lighter;
+$navbar-item-hover-background-color: $tangerine-lighter;
 
-$tag-background-color: $red-wine;
-$tag-color: $scarlet-pink;
+$tag-background-color: black;
+$tag-color: white;
 $tag-radius: 0;
 
-$box-background-color: $red-wine;
+$box-background-color: $metal-lighter;
 $box-radius: 0;
-$text: $white;
-$text-strong: $white;
-$title-color: $white;
-$subtitle-color: $white;
-$title-color: $white;
-$content-heading-color: $white;
+$text: black;
+$text-strong: black;
+$title-color: black;
+$subtitle-color: black;
+$title-color: black;
+$content-heading-color: black;
 
-$link: $poison;
-$link-visited: $poison-darker;
-$link-hover: $poison-lighter;
+$link: $tangerine;
+$link-visited: $tangerine-darker;
+$link-hover: $tangerine-lighter;
 
-$footer-background-color: $beet-darker;
+$footer-background-color: $metal;
 $footer-height: 144px;
