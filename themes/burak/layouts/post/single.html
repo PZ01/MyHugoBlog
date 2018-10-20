@@ -1,0 +1,66 @@
+{{ partial "header.html" . }}
+
+<body>
+    {{ partial "banner.html" . }}
+    <section class="section">
+        <div class="container container-post">
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <i class="far fa-times-circle fa-2x"></i>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                {{ $baseurl := .Site.BaseURL }}
+                <a class="navbar-item" href="{{ $baseurl }}{{ .Prev }}">
+                    <i class="fas fa-chevron-left fa-2x"></i>
+                </a>
+                <a class="navbar-item" href="{{ .Next.URL }}">
+                    <i class="fas fa-chevron-right fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+<div class="box">
+
+<nav class="level">
+    <div class="level-left">
+        <div class="level-item">
+            <img class="image is-48x48 is-rounded" src="{{"/images/face.jpg" | relURL }}" alt="Author's Picture" />
+        </div>
+        <div class="level-item">
+            <span class="text-emphasis">Posted By
+                <a href="#">
+                    {{ .Page.Params.Author }}
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="level-right">
+        <div class="level-item text-emphasis">
+            <a>
+                Share
+                <!--font-awesome-icon icon="share-square" class="icon-violet"/-->
+                <i class="fas fa-share-square"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+
+    <div class="content">
+        <h1 class="title is-1">{{.Page.Title}}</h1>
+        <p>
+            {{.Page.Content}}
+        </p>
+    </div>
+</div>
+        </div>
+    </section>
+
+{{ partial "footer.html" .}}
+</body>

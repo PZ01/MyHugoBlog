@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
 
+$post-width: 960px; /*Number divisable by 12 and 16*/
+
 $tangerine: #ff4e00;
 $tangerine-lighter: #ff834d;
 $tangerine-darker: #cc3e00;
@@ -16,7 +18,8 @@ $primary: $tangerine;
 $success: black;
 $info: black;
 
-$navbar-item-hover-background-color: $tangerine-lighter;
+$navbar-background-color: $metal-darker;
+$navbar-item-hover-background-color: $metal-darker;
 
 $tag-background-color: black;
 $tag-color: white;

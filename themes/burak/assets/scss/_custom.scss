@@ -5,3 +5,44 @@ body {
 .title a {
     background-image: linear-gradient(transparent 30px, $metal 30px);
 }
+
+p.link {
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.container-post {
+    width: $post-width !important;
+
+    .navbar {
+        background-color: $navbar-background-color;
+        padding: 0 1.25rem 0 1.25rem;
+        box-shadow: $box-shadow
+    }
+
+    .content {
+        h1 {
+            background-color: $tangerine-lighter;
+            font-family: $family-playfair;
+            font-style: italic;
+            display: inline-block;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+
+    .is-rounded {
+        border-radius: 50% !important;
+    }
+}
+
+.nav-icon {
+    padding: 10px; 
+    font-size: 42px; 
+    color: Dodgerblue;
+}
