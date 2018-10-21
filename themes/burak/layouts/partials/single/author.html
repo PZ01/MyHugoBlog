@@ -1,11 +1,14 @@
 <nav class="level">
     <div class="level-left">
         <div class="level-item">
-            <img class="image is-48x48 is-rounded" src="{{"/images/face.jpg" | relURL }}" alt="Author's Picture" />
+            <img 
+                class="image is-48x48 is-rounded" 
+                src="{{"/images/face.jpg" | relURL }}" 
+                alt="Author's Picture"/>
         </div>
         <div class="level-item">
             <span class="text-emphasis">Posted By
-                <a href="#">
+                <a href="{{ with .Site.GetPage "/pages/about.md" }}{{ .URL}}{{ end }}">
                     {{ .Page.Params.Author }}
                 </a>
             </span>
