@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <i class="far fa-times-circle fa-2x"></i>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            {{ $baseurl := .Site.BaseURL }}
+            {{ if .PrevInSection }}
+            <a class="navbar-item" href="{{ .PrevInSection.Permalink }}">
+                <i class="fas fa-chevron-left fa-2x"></i>
+            </a>
+            {{ end }}
+
+            {{ if .NextInSection }}
+            <a class="navbar-item" href="{{ .NextInSection.Permalink }}">
+                <i class="fas fa-chevron-right fa-2x"></i>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,23 @@
+<nav class="level">
+    <div class="level-left">
+        <div class="level-item">
+            <img class="image is-48x48 is-rounded" src="{{"/images/face.jpg" | relURL }}" alt="Author's Picture" />
+        </div>
+        <div class="level-item">
+            <span class="text-emphasis">Posted By
+                <a href="#">
+                    {{ .Page.Params.Author }}
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="level-right">
+        <div class="level-item text-emphasis">
+            <a>
+                Share
+                <!--font-awesome-icon icon="share-square" class="icon-violet"/-->
+                <i class="fas fa-share-square"></i>
+            </a>
+        </div>
+    </div>
+</nav>
