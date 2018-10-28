@@ -1,0 +1,31 @@
+<section class="section">
+    <div class="container container-post" id="sub">
+        <h1 class="title">Subscribe</h1>
+        <h4 class="subtitle">
+            Receive recently featured articles and thoughts from the writer.
+        </h4>
+
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-large" type="text" placeholder="Enter e-mail">
+                    <span class="icon is-medium is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-medium is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="control">
+                <button 
+                class="button is-primary is-large" 
+                v-bind:disabled="isBtnDisabled"
+                v-on:click="subClicked">
+                    <span v-text="subBtnLabel">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

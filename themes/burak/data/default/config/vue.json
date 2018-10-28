@@ -1,0 +1,7 @@
+{
+  "library": {
+    "path": "https://cdn.jsdelivr.net/npm/vue/dist/vue.js",
+    "config": ""
+  },
+  "config": {}
+}

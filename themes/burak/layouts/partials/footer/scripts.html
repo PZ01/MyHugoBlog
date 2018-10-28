@@ -1,0 +1,5 @@
+{{ partial "footer/vue" . }}
+
+
+{{ $js := resources.Get "scripts/main.js" | minify | fingerprint }}
+<script src='{{ $js.Permalink }}'></script>
