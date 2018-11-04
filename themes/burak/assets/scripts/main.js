@@ -29,3 +29,24 @@ var app = new Vue({
     }
   }
 })
+
+var app = new Vue({
+  el: '#share',
+  data: {
+    openModal: false
+  },
+  computed: {
+    activate() {
+      return this.openModal ? 'is-active' : '';
+    },
+
+  },
+  methods: {
+    shareClicked: function (event) {
+      this.openModal = true;
+    },
+    closeClicked: function(event) {
+      this.openModal = false;
+    }
+  }
+})

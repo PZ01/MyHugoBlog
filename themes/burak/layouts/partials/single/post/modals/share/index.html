@@ -1,0 +1,12 @@
+<div class="modal" :class="activate">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        {{ partial "single/post/modals/share/content.html" . }}
+    </div>
+    <button 
+        class="modal-close is-large" 
+        aria-label="close"
+        v-on:click="closeClicked"
+    >
+    </button>
+</div>

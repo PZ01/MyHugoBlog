@@ -15,8 +15,9 @@
         </div>
     </div>
     <div class="level-right">
-        <div class="level-item text-emphasis">
-            <a>
+        <div id="share" class="level-item text-emphasis">
+            {{ partial "single/post/modals/share/index.html" . }}
+            <a v-on:click="shareClicked">
                 Share
                 <!--font-awesome-icon icon="share-square" class="icon-violet"/-->
                 <i class="fas fa-share-square"></i>
