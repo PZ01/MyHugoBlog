@@ -8,22 +8,26 @@
         <div class="field has-addons">
             <div class="control is-expanded">
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-large" type="text" placeholder="Enter e-mail">
+                    <input 
+                        class="input is-large" 
+                        type="text" 
+                        placeholder="Enter e-mail"
+                        v-model="email"
+                        >
                     <span class="icon is-medium is-left">
                         <i class="fas fa-envelope"></i>
                     </span>
                     <span class="icon is-medium is-right">
-                        <i class="fas fa-check"></i>
+                        <i :class="classesOnValidation"></i>
                     </span>
                 </div>
             </div>
             <div class="control">
                 <button 
                 class="button is-primary is-large" 
-                v-bind:disabled="isBtnDisabled"
+                v-bind:disabled="cannotSubmit"
                 v-on:click="subClicked">
-                    <span v-text="subBtnLabel">
-                    </span>
+                    <span v-text="subBtnLabel"></span>
                 </button>
             </div>
         </div>

@@ -46,3 +46,11 @@ p.link {
     font-size: 42px; 
     color: Dodgerblue;
 }
+
+.is-valid {
+    color: $success;
+}
+
+.is-invalid {
+    color: $danger;
+}
