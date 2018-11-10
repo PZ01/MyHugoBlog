@@ -10,6 +10,7 @@ p.link {
     a {
         text-decoration: underline;
     }
+
     a:hover {
         text-decoration: none;
     }
@@ -31,6 +32,7 @@ p.link {
             font-style: italic;
             display: inline-block;
         }
+
         p {
             text-align: justify;
         }
@@ -42,8 +44,8 @@ p.link {
 }
 
 .nav-icon {
-    padding: 10px; 
-    font-size: 42px; 
+    padding: 10px;
+    font-size: 42px;
     color: Dodgerblue;
 }
 
