@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+
+<body>
+    {{ partial "banner.html" . }}
+    <section class="section">
+        <div class="container">
+            <h5 class="title">
+                {{ .Title }}
+            </h5>
+            <h6 class="subtitle">
+                {{ .Content }}
+            </h6>
+            <br>
+            {{ range (.Paginator 10).Pages }}
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <strong>
+                                <a href="{{ .Permalink }}">
+                                    {{ .Title }}
+                                </a>
+                            </strong>
+                            <small class="is-italic">written on {{ .PublishDate.Format "January 2, 2006" }}</small>
+                            <small>
+                                {{ .Content | safeHTML | truncate 100 }}
+                            </small>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {{ end }}
+            {{ partial "pagination.html" .Paginator }}
+        </div>
+    </section>
+    {{ partial "footer.html" .}}
+</body>
