@@ -5,7 +5,7 @@
                 <img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;">
             </p>
             <p class="level-right has-text-centered is-italic">
-                The world through the lenses.
+                {{ index (shuffle .Site.Data.default.other.quotes) 0 }}
             </p>
         </nav>
     </div>
