@@ -1,14 +1,11 @@
 <div class="tile is-child box">
     <p class="title">
-        <a class="link is-info" href="{{ .Page.URL }}">{{ .Page.Title }}</a>
+        {{ .Page.Title }}
     </p>
     <p class="subtitle is-6 is-italic">
         written by {{ .Page.Params.Author }} on {{ .Page.PublishDate.Format "January 2, 2006" }}.
     </p>
     <p>
-    {{ .Page.Content | safeHTML | truncate .truncate }}
-    </p>
-    <p class="link">
-        <a href="{{ .Permalink }}"> Read more.</a>
+        {{ .Page.Content}}
     </p>
 </div>

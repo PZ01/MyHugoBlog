@@ -2,21 +2,35 @@
 
 $post-width: 960px; /*Number divisable by 12 and 16*/
 
+/*
+Main Colors
+*/
 $tangerine: #ff4e00;
 $tangerine-lighter: #ff834d;
 $tangerine-darker: #cc3e00;
+
+$moon: #425A78;
+$moon-lighter: #87B8F5;
+$moon-darker: #2D3D52;
 
 $metal: #f6f6f6;
 $metal-lighter: #fbfbfb;
 $metal-darker: #eee;
 
+/*
+Fonts
+*/
 $family-playfair: "Playfair Display", serif;
 $family-opensans: "Open Sans", sans-serif;
 $family-primary: $family-opensans;
 
-$primary: $tangerine;
+$primary: $moon;
 $success: green;
 $info: black;
+
+$website-background-color: $metal-darker;
+
+$header-background-color: $moon-lighter;
 
 $navbar-background-color: $metal-darker;
 $navbar-item-hover-background-color: $metal-darker;
@@ -34,9 +48,9 @@ $subtitle-color: black;
 $title-color: black;
 $content-heading-color: black;
 
-$link: $tangerine;
-$link-visited: $tangerine-darker;
-$link-hover: $tangerine-lighter;
+$link: $moon;
+$link-visited: $moon-darker;
+$link-hover: $moon-lighter;
 
 $footer-background-color: $metal;
 $footer-height: 144px;

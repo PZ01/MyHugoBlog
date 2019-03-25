@@ -1,5 +1,5 @@
 body {
-    background-color: $metal-darker;
+    background-color: $website-background-color;
 }
 
 .title a {
@@ -27,7 +27,7 @@ p.link {
 
     .content {
         h1 {
-            background-color: $tangerine-lighter;
+            background-color: $header-background-color;
             font-family: $family-playfair;
             font-style: italic;
             display: inline-block;

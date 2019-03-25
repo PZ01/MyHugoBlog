@@ -1,5 +1,8 @@
-{{ partial "footer/vue" . }}
+{{- $vue := .Site.Data.default.config.vue -}}
+<script type='text/javascript' async src='{{- $vue.library.path -}}'></script>
 
+{{- $axios := .Site.Data.default.config.axios -}}
+<script type='text/javascript' async src='{{- $axios.library.path -}}'></script>
 
 {{ $js := resources.Get "scripts/main.js" | minify | fingerprint }}
 <script src='{{ $js.Permalink }}'></script>

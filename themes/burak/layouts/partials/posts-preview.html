@@ -1,12 +1,10 @@
-<div class="tile is-ancestor has-text-justified">
-    <div class="tile is-parent">
-        {{ range first 1 .Pages.ByPublishDate.Reverse }}
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+
+        {{ $posts:= (where (.Paginator 2).Pages.ByPublishDate.Reverse "Section" "posts" ) }}
+        {{ range $posts }}
             {{ partial "post-preview-content.html" (dict "Page" . "truncate" 1000) }}
         {{ end }}
-    </div>
-    <div class="tile is-4 is-vertical is-parent">
-        {{ range first 3 (after 1 .Pages.ByPublishDate.Reverse) }}
-            {{ partial "post-preview-content.html" (dict "Page" . "truncate" 100) }}
-        {{ end }}
+        {{ partial "pagination.html" .Paginator }}
     </div>
 </div>
