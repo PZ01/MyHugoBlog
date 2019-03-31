@@ -1,0 +1,9 @@
+<div class="columns">
+{{ $posts:= (where (.Paginator 3).Pages.ByPublishDate.Reverse "Section" "posts" ) }}
+{{ range $posts }}
+  <div class="column">
+    {{ partial "post-content.html" (dict "Page" . "truncate" 1000) }}
+  </div>
+{{ end }}
+</div>
+{{ partial "pagination.html" .Paginator }}

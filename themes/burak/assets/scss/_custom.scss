@@ -6,11 +6,30 @@ body {
     background-image: linear-gradient(transparent 30px, $metal 30px);
 }
 
-p.link {
-    a {
-        text-decoration: underline;
-    }
+div.first-letter p::first-letter {
+  font-size: 150%;
+  color: $first-letter-color;
+}
 
+.pagination a {
+    color: $pagination-link-color;
+    background-color: $pagination-background-color;
+}
+
+.is-current {
+    background-color: $pagination-background-current-color !important;
+}
+
+.quote {
+    color: $metal-darker;
+    background-color: $moon-even-darker;
+}
+
+footer a, .content a {
+    border-bottom: $metal-darker 1px dotted;
+}
+
+p.link {
     a:hover {
         text-decoration: none;
     }

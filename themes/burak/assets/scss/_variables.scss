@@ -12,10 +12,12 @@ $tangerine-darker: #cc3e00;
 $moon: #425A78;
 $moon-lighter: #87B8F5;
 $moon-darker: #2D3D52;
+$moon-even-darker: #212d3d;
 
 $metal: #f6f6f6;
 $metal-lighter: #fbfbfb;
 $metal-darker: #eee;
+$metal-even-darker: #c1bfbf;
 
 /*
 Fonts
@@ -28,7 +30,7 @@ $primary: $moon;
 $success: green;
 $info: black;
 
-$website-background-color: $metal-darker;
+$website-background-color: $moon-darker;
 
 $header-background-color: $moon-lighter;
 
@@ -39,18 +41,27 @@ $tag-background-color: black;
 $tag-color: white;
 $tag-radius: 0;
 
-$box-background-color: $metal-lighter;
+$card-background-color: $moon;
+$card-color: $metal-lighter;
+
+$first-letter-color: $metal;
+
+$box-background-color: $moon-lighter;
 $box-radius: 0;
-$text: black;
-$text-strong: black;
+$text: $metal;
+$text-strong: $metal-even-darker;
 $title-color: black;
 $subtitle-color: black;
-$title-color: black;
+$title-color: $metal-darker;
+$subtitle-color: $metal-even-darker;
 $content-heading-color: black;
 
-$link: $moon;
-$link-visited: $moon-darker;
+$link: $metal-darker;
+$link-visited: $moon;
 $link-hover: $moon-lighter;
+$pagination-link-color: white;
+$pagination-background-color: $moon-darker;
+$pagination-background-current-color: $moon-even-darker;
 
-$footer-background-color: $metal;
+$footer-background-color: $moon-even-darker;
 $footer-height: 144px;
